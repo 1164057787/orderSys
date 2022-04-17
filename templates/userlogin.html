@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UserLogin</title>
+</head>
+<body>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>userlogin</title>
+    <script src="/static/plugins/jquery-1.12.3.js"></script>
+    {#    <script src="/static/plugins/jquery-validation-1.14-dist/jquery.validate.js"></script>#}
+    <script src="/static/js/login.js"></script>
+    {##}
+    {#    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->#}
+    {#<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">#}
+    {#<!-- 可选的 Bootstrap 主题文件（一般不用引入） -->#}
+    {#<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">#}
+    {#<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->#}
+    {#<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>#}
+    <link rel="stylesheet" href="/static/plugins/bootstrap-3.3.7-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/static/css/login.css">
+</head>
+<body>
+
+{% include "nav.html" %}
+ <h5 class="page-header"></h5>
+<div class="container">
+
+    <form class="form-signin" action="" method="post" novalidate>
+        <h2 class="form-signin-heading">Sign in for User</h2>
+        <label for="inputEmail" class="sr-only">Username</label>
+        <input type="email" id="inputEmail" name="user" class="form-control" placeholder="userName" required=""
+               autofocus="">
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" name="pwd" class="form-control" placeholder="userPassword" required="">
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" value="remember-me"> Remember me
+            </label>
+        </div>
+{#        <p id="errorinfo">{{ error }}</p>#}
+        <button id="btn" class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+
+
+    </form>
+</div> <!-- /container -->
+
+</body>
+</html>
+
+
+
+
+</body>
+</html>

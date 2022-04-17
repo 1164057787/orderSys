@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>CheckUser</title>
+
+    <link rel="stylesheet" href="/static/plugins/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/list.css">
+
+</head>
+
+
+<body>
+
+{% include "adminnav.html" %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+            <ul class="nav nav-sidebar">
+                <li ><a href="/unfinorder/">未完成工单</a></li>
+                <li><a href="/finorder/">已完成工单</a></li>
+                <li class="active"><a href="#">新用户审核</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-9 col-md-offset-2 main">
+
+            <h2 class="sub-header">待审核用户列表</h2>
+            <div class="table-responsive">
+                {#                <table class="table table-striped table-bordered table-hover">#}
+                <table class="table  table-bordered table-hover">
+                    <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>用户ID</th>
+                        <th>用户姓名</th>
+                        <th>操作选择</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {#                    {% for i in all_stock %}#}
+                    {% for i in page %}
+                        <tr>
+                                <td>{{ forloop.counter }}</td>
+                                <td >{{ i.id }}</td>
+                                <td >{{ i.username }}</td>
+                                <td><a class="btn btn-success btn-sm" href="/check/?userid={{ i.id }}">审核通过</a>
+                                </td>
+                        </tr>
+                    {% endfor %}
+
+
+                    </tbody>
+                </table>
+
+            </div>
+
+
+            <nav aria-label="Page navigation">
+                <ul class="pagination">
+                    {#                上一页#}
+                    <li class="{% if not page.has_previous %}disabled{% endif %}">
+                        {% if  page.has_previous %}
+                            <a href="/checkuser/?page={{ page.previous_page_number }}" aria-label="Previous">
+                        {% endif %}
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+
+                    {#                页码#}
+                    {% for li in p.page_range %}
+                        <li class="{% if li == page.number %}active{% else %}{% endif %}">
+                            <a href="/checkuser/?page={{ li }}">{{ li }}</a>
+                        </li>
+                    {% endfor %}
+
+                    {#下一页#}
+                    <li class="{% if not page.has_next %}disabled{% endif %}">
+                        {% if page.has_next %}
+                            <a href="/checkuser/?page={{ page.next_page_number }}" aria-label="Next">
+                        {% endif %}
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            {#            {% load mytags %}#}
+            {#            {% pagination 6 %}#}
+
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>

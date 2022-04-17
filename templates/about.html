@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About</title>
+    <link rel="stylesheet" href="/static/plugins/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    {#    <link rel="stylesheet" href="/static/css/about.css">#}
+    <link rel="stylesheet" href="/static/css/help.css">
+</head>
+<body>
+<body>
+{% include "nav.html" %}
+
+<div class="container">
+
+    <div class="row row-offcanvas row-offcanvas-right">
+
+        <div class="col-xs-12 col-sm-9">
+
+            <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+                <h1 class="display-4">About us</h1>
+                <p class=" text-left" style="font-size: 19px">
+                    一款应用于处理日常工作事务的工单系统。我们尽最大的努力，服务于每一位用户！在工作中的事务建议通过该系统提交，我们也会及时的做出反馈！
+                </p>
+            </div>
+
+            <h5 class="page-header"></h5>
+            {#                    分隔开线#}
+
+            <div class="col-xs-3 col-sm-4 placeholder">
+                <img src="/static/imgs/aboutImgs/2.jpg"
+                     width="200" height="200">
+                <h4>专业的团队</h4>
+                <span class="text-muted">
+                    我们致力于用最专业的团队，解决您的一切问题。结合其他用户的使用体验，为您定制个性化服务，提升您的使用体验！
+                    </span>
+            </div>
+            <div class="col-xs-3 col-sm-4 placeholder">
+                <img src="/static/imgs/aboutImgs/1.jpg"
+                     width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+                <h4>友好的界面</h4>
+                <span class="text-muted">
+                    系统采用目前流行的技术来开发，是一款优秀的工单处理系统，界面美观、功能多样、可交互性强，用户体验佳！
+                    </span>
+            </div>
+            <div class="col-xs-3 col-sm-4 placeholder">
+                <img src="/static/imgs/aboutImgs/3.jpg"
+                     width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+                <h4>用心的服务</h4>
+                <span class="text-muted">
+                    在工单解决中，如果一次尚未解决您的问题，您可以继续提问，工作人员会在第一时间为您答疑解惑！
+                </span>
+            </div>
+
+        </div><!--/.col-xs-12.col-sm-9-->
+
+
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
+
+            <div class="list-group">
+                <a href="/help/" class="list-group-item ">
+                    <h4 class="list-group-item-heading">使用帮助</h4>
+                    <p class="list-group-item-text">
+                        Use assistance.Here you are supposed to get approaches to how to use
+                        the order system.</p>
+                </a>
+                <a href="/about/" class="list-group-item  active">
+                    <h4 class="list-group-item-heading">关于我们</h4>
+                    <p class="list-group-item-text">
+                        About us.Here you will get more information about our team,system and other
+                        notes you want to know.</p>
+                </a>
+
+            </div>
+
+
+        </div><!--/.sidebar-offcanvas-->
+    </div><!--/row-->
+
+    <hr>
+
+    <footer>
+        <p>© CopyRight 2022</p>
+    </footer>
+
+</div><!--/.container-->
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="/static/plugins/jquery-1.12.3.js"></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="/static/plugins/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+
+</body>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Help</title>
+    <link rel="stylesheet" href="/static/plugins/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/list.css">
+    <link rel="stylesheet" href="/static/css/help.css">
+</head>
+<body>
+
+{% include "nav.html" %}
+
+<div class="container">
+
+    <div class="row row-offcanvas row-offcanvas-right">
+
+        <div class="col-xs-12 col-sm-9">
+            <p class="pull-right visible-xs">
+                <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
+            </p>
+            <div class="jumbotron">
+                <h2>Welcome to order system!</h2>
+                <p>There are steps to show how to use this order system.Firsty,you need to log in the system,if you
+                    don't hava an account,please register.Then,you are able to use it to submit the problem in this system.
+                </p>
+            </div>
+            <div class="row" deep="3">
+                <div class="col-xs-6 col-lg-4">
+                    <h3>主页面</h3>
+                    <p>
+                        主页面是对本系统功能的简要概述，用户可以通过主页对系统进行简要的了解。此外，在主页的导航栏内容，用户可以根据此内容进行页面的跳转，直接访问其他页面以此来进行后续的其他操作。
+                    </p>
+                    <p><a class="btn btn-default"  role="button">Next »</a></p>
+                </div><!--/.col-xs-6.col-lg-4-->
+                <div class="col-xs-6 col-lg-4">
+                    <h3>登录注册</h3>
+                    <p>用户在访问系统的核心功能时候则需要登录后方可进行。未曾登陆的用户无法访问
+                        核心功能，只能访问系统主页。若没有账号，可以直接跳转到注册页面进行账号注册等，注册后再进行登录操作。
+                         </p>
+                    <p><a class="btn btn-default"  role="button">Next »</a></p>
+                </div><!--/.col-xs-6.col-lg-4-->
+                <div class="col-xs-6 col-lg-4">
+                    <h3>工单提交</h3>
+                    <p>登录系统后，用户可以提价工单，在工单中说明具体问题，然后由管理员回复；若一个工单再经过回复后尚未解决问题，用户可以进行继续提问，直至问题结束。若用户关闭了工单，则不可再咨询。
+                        </p>
+                    <p><a class="btn btn-default"  role="button">Next »</a></p>
+                </div><!--/.col-xs-6.col-lg-4-->
+            </div><!--/row-->
+        </div><!--/.col-xs-12.col-sm-9-->
+
+
+
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
+
+            <div class="list-group">
+                <a href="/help/" class="list-group-item active">
+                    <h4 class="list-group-item-heading">使用帮助</h4>
+                    <p class="list-group-item-text">
+                        Use assistance.Here you are supposed to get approaches to how to use
+                        the order system.</p>
+                </a>
+                <a href="/about/" class="list-group-item">
+                    <h4 class="list-group-item-heading">关于我们</h4>
+                    <p class="list-group-item-text">
+                        About us.Here you will get more information about our team,system and other
+                        notes you want to know.</p>
+                </a>
+
+            </div>
+
+        </div><!--/.sidebar-offcanvas-->
+    </div><!--/row-->
+
+    <hr>
+
+    <footer>
+        <p>© CopyRight 2022</p>
+    </footer>
+
+</div><!--/.container-->
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="/static/plugins/jquery-1.12.3.js"></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="/static/plugins/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>
